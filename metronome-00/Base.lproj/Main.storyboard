@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Metronome View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MetronomeViewController" customModule="metronome_00" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="60" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EfH-31-o35">
+                                <rect key="frame" x="45" y="41" width="510" height="179.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="150"/>
+                                <color key="textColor" red="0.77254901960784317" green="0.90588235294117647" blue="0.95294117647058818" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a4k-51-ZE9">
+                                <rect key="frame" x="45" y="490" width="98" height="58"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="98" id="Q58-fh-tV0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="38"/>
+                                <state key="normal" title="Stop">
+                                    <color key="titleColor" red="0.7725490196" green="0.90588235289999997" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonToggle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ovd-eC-qn3"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.13723855872427301" green="0.16065358652104691" blue="0.20207272812971344" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="EfH-31-o35" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="21" id="3dm-yc-q5D"/>
+                            <constraint firstItem="EfH-31-o35" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" constant="-25" id="KmV-Yi-NLs"/>
+                            <constraint firstItem="a4k-51-ZE9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="25" id="Xl9-Zl-Yw3"/>
+                            <constraint firstItem="EfH-31-o35" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="25" id="gZ1-yk-Agt"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="a4k-51-ZE9" secondAttribute="bottom" constant="52" id="jlp-3j-Zpy"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="XUb-bz-sIE" appends="YES" id="29v-gn-DEh"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="buttonMetronome" destination="a4k-51-ZE9" id="cjr-et-rYh"/>
+                        <outlet property="labelTempo" destination="EfH-31-o35" id="Bhs-62-eGU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="XUb-bz-sIE">
+                    <connections>
+                        <action selector="changeBeat:" destination="BYZ-38-t0r" id="RHU-cL-Ndm"/>
+                    </connections>
+                </panGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="368" y="439"/>
+        </scene>
+    </scenes>
+</document>
