@@ -17,10 +17,10 @@ class MetronomeViewController: UIViewController {
         return UIStatusBarStyle.LightContent
         }
     
-    var tempo: Double = 82.0
+    var tempo: Double = 60.0
     var tempoGestureScale: Double = 4
     var generator: AKOperationGenerator?
-    var metronomeOn: Bool = false
+    var metronomeOn: Bool = true
 
     @IBOutlet weak var labelTempo: UILabel!
     @IBOutlet weak var buttonMetronome: UIButton!
